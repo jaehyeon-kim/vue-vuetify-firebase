@@ -1,11 +1,25 @@
 <template>
   <v-app>
-    <v-toolbar>
-      <v-toolbar-title>DevMeetup</v-toolbar-title>
+    <v-navigation-drawer v-model="sideNav" absolute temporary>
+      <v-list>
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-icon>supervisor_account</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>Vue Meetups</v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar dark color="purple darken-1">
+      <v-toolbar-side-icon 
+        @click.native.stop="sideNav = !sideNav"
+        class="hidden-sm-and-up"
+      ></v-toolbar-side-icon>
+      <v-toolbar-title>DevMeetup</v-toolbar-title>      
       <v-spacer></v-spacer>
-      <v-toolbar-items>
+      <v-toolbar-items class="hidden-xs-only">
         <v-btn flat>
-          <v-icon>supervisor_account</v-icon>
+          <v-icon left>supervisor_account</v-icon>
           Vue Meetups
         </v-btn>
       </v-toolbar-items>
@@ -20,7 +34,7 @@
 export default {
   data () {
     return {
-
+      sideNav: false
     }
   }
 }
