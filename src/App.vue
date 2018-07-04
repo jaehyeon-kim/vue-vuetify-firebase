@@ -48,8 +48,8 @@ export default {
     return {
       sideNav: false,
       menuItems: [
-        { icon: 'supervisor_account', title: 'Vue Meetups', link: '/meetup/new' },
-        { icon: 'room', title: 'Organize Meetup', link: '/create' },
+        { icon: 'supervisor_account', title: 'Vue Meetups', link: '/meetups' },
+        { icon: 'room', title: 'Organize Meetup', link: '/meetup/new' },
         { icon: 'person', title: 'Profile', link: '/profile' },
         { icon: 'face', title: 'Sign up', link: '/signup' },
         { icon: 'lock_open', title: 'Sign in', link: '/signin' }
