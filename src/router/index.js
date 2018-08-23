@@ -14,7 +14,7 @@ Vue.use(Router)
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/meetups', name: 'Meetups', component: Meetups },
-  { path: '/meetups/:id', name: 'Meetup', component: Meetup},
+  { path: '/meetups/:id', name: 'Meetup', component: Meetup, props: true},
   { path: '/meetup/new', name: 'CreateMeetup', component: CreateMeetup },
   { path: '/signin', name: 'SignIn', component: SignIn },
   { path: '/signup', name: 'SignUp', component: SignUp },
